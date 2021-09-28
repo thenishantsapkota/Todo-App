@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     font-family: sans-serif;
+    background-color: whitesmoke;
 }
 
 .content {
@@ -32,4 +33,8 @@ td {
 
 #content {
     width: 70%;
+}
+
+.task-completed{
+    text-decoration: line-through;
 }
