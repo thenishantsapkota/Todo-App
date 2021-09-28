@@ -10,12 +10,14 @@
 
     <table>
         <tr>
+            <th>Serial No.</th>
             <th>Task</th>
             <th>Created</th>
             <th>Actions</th>
         </tr>
         {% for task in tasks %}
         <tr>
+            <td>{{ loop.index }}</td>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created}}</td>
             <td>
