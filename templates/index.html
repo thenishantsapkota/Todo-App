@@ -7,12 +7,12 @@
 {% block body %}
 <div class="content">
     <h1 style="text-align: center;">Todo App</h1>
-
     <table>
         <tr>
             <th>Serial No.</th>
             <th>Task</th>
             <th>Created</th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
         {% for task in tasks %}
@@ -20,10 +20,13 @@
             <td>{{ loop.index }}</td>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created}}</td>
+            <td>{% if task.complete %} Complete {% else %} Incomplete {% endif %}</td>
             <td>
-                <a href="/delete/{{ task._id }}">Delete</a>
+                <button onclick="window.location.href='/delete/{{ task._id }}'">Delete</button>
                 <br>
-                <a href="/update/{{ task._id }}">Update</a>
+                <button onclick="window.location.href='/update/{{ task._id }}'">Update</button>
+                <br>
+                {% if not task.complete %}<button onclick="window.location.href='/complete/{{ task._id }}'">Mark Complete</button>{% else %} {% endif %}
             </td>
         </tr>
         {% endfor %}
