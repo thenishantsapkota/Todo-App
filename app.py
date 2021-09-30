@@ -3,10 +3,11 @@ from flask_pymongo import PyMongo
 from datetime import date
 from bson import ObjectId
 
+
 app = Flask(__name__)
 app.config[
     "MONGO_URI"
-] = "Your URI Here"
+] = "mongodb+srv://nishant:decoder123J@cluster0.dhgkx.mongodb.net/todo_db?authSource=admin&replicaSet=atlas-r52uxo-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true"
 
 mongo = PyMongo()
 mongo.init_app(app)
