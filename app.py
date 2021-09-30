@@ -6,7 +6,7 @@ from bson import ObjectId
 app = Flask(__name__)
 app.config[
     "MONGO_URI"
-] = "URI Here"
+] = "Your URI Here"
 
 mongo = PyMongo()
 mongo.init_app(app)
