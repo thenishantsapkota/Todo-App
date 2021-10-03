@@ -3,6 +3,7 @@ from flask_pymongo import PyMongo
 from datetime import date
 from bson import ObjectId
 
+
 app = Flask(__name__)
 app.config[
     "MONGO_URI"
